@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #070b14;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html[data-theme='light'] body {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+html[data-theme='light'] .glass-panel {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+html[data-theme='light'] [class*='bg-[#070b14]'] {
+  background-color: #f1f5f9;
+}
+
+html[data-theme='light'] [class*='bg-slate-950'] {
+  background-color: #ffffff;
+}
+
+html[data-theme='light'] [class*='bg-slate-900'] {
+  background-color: #f8fafc;
+}
+
+html[data-theme='light'] [class*='bg-slate-800'] {
+  background-color: #e2e8f0;
+}
+
+html[data-theme='light'] [class*='bg-slate-700'] {
+  background-color: #cbd5e1;
+}
+
+html[data-theme='light'] [class*='text-white'] {
+  color: #0f172a;
+}
+
+html[data-theme='light'] [class*='text-slate-100'],
+html[data-theme='light'] [class*='text-slate-200'] {
+  color: #1e293b;
+}
+
+html[data-theme='light'] [class*='text-slate-300'] {
+  color: #334155;
+}
+
+html[data-theme='light'] [class*='text-slate-400'] {
+  color: #475569;
+}
+
+html[data-theme='light'] [class*='text-slate-500'] {
+  color: #64748b;
+}
+
+html[data-theme='light'] [class*='border-slate-800'] {
+  border-color: #cbd5e1;
+}
+
+html[data-theme='light'] [class*='border-slate-700'] {
+  border-color: #94a3b8;
+}
+
+html[data-theme='light'] .hero-scene {
+  background:
+    radial-gradient(ellipse at 24% 34%, rgba(34, 211, 238, 0.22), transparent 48%),
+    radial-gradient(ellipse at 78% 66%, rgba(96, 165, 250, 0.2), transparent 50%),
+    linear-gradient(145deg, #e0f2fe, #f8fafc 55%, #dbeafe);
+}
+
+html[data-theme='light'] .hero-scene-grid {
+  background-image:
+    linear-gradient(rgba(8, 145, 178, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.1) 1px, transparent 1px);
+}
+
+html[data-theme='light'] .hero-scene-orbit {
+  border-color: rgba(8, 145, 178, 0.24);
+}
+
+html[data-theme='light'] .hero-orbit-two {
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+html[data-theme='light'] .hero-flying-drone,
+html[data-theme='light'] .hero-product-float {
+  opacity: 0.62;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Glowing utilities */
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.4);
+}
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(2, 132, 199, 0.35);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-scene {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 24% 34%, rgba(8, 145, 178, 0.28), transparent 48%),
+    radial-gradient(ellipse at 78% 66%, rgba(37, 99, 235, 0.24), transparent 50%),
+    linear-gradient(145deg, #101d31, #152b40 55%, #101a2d);
+}
+
+.hero-scene-grid {
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.09) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+}
+
+.hero-scene-orbit {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  width: 72%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(103, 232, 249, 0.23);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-orbit-one {
+  animation: hero-orbit 18s linear infinite;
+}
+
+.hero-orbit-two {
+  width: 94%;
+  border-color: rgba(96, 165, 250, 0.2);
+  animation: hero-orbit 25s linear infinite reverse;
+}
+
+.hero-flying-drone {
+  animation: hero-drone-flight 6s ease-in-out infinite;
+}
+
+.hero-product-float {
+  animation: hero-product-float 5s ease-in-out infinite;
+}
+
+.hero-phone-tile {
+  animation-delay: -1.2s;
+}
+
+.hero-chip-tile {
+  animation-delay: -2.3s;
+}
+
+@keyframes hero-drone-flight {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+  50% { transform: translate3d(8px, -20px, 0) rotate(2deg); }
+}
+
+@keyframes hero-product-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes hero-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit-one,
+  .hero-orbit-two,
+  .hero-flying-drone,
+  .hero-product-float {
+    animation: none;
+  }
+}

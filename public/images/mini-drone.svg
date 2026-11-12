@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071525"/><stop offset="1" stop-color="#102d47"/></linearGradient>
+    <linearGradient id="body" x2="1" y2="1"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="640" height="480" rx="36" fill="url(#bg)"/>
+  <circle cx="320" cy="230" r="140" fill="#06b6d4" opacity=".14" filter="url(#glow)"/>
+  <path d="M0 350h640M0 390h640" stroke="#164e63" stroke-width="2" opacity=".6"/>
+  <g fill="none" stroke="#67e8f9" stroke-width="9" stroke-linecap="round">
+    <path d="m270 220-92-65M370 220l92-65M270 250l-93 68M370 250l93 68"/>
+    <ellipse cx="146" cy="135" rx="60" ry="15"/><ellipse cx="494" cy="135" rx="60" ry="15"/>
+    <ellipse cx="145" cy="343" rx="60" ry="15"/><ellipse cx="495" cy="343" rx="60" ry="15"/>
+  </g>
+  <path d="M262 205q58-35 116 0l-17 64q-41 26-82 0z" fill="url(#body)" stroke="#cffafe" stroke-width="4"/>
+  <path d="M296 258h48l12 25h-72z" fill="#0f172a" stroke="#67e8f9" stroke-width="4"/>
+  <circle cx="320" cy="266" r="12" fill="#22d3ee"/>
+  <text x="320" y="438" fill="#e0f2fe" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle">MINI DRONE • 4 MOTORI</text>
+</svg>
